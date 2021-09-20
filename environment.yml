@@ -1,0 +1,8 @@
+name: cuboidNC
+channels:
+  - conda-forge
+  - anaconda
+  - defaults
+dependencies:
+  - python=3.8
+  - numpy

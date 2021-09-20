@@ -1,0 +1,24 @@
+T="TRUMPF"
+$A_DBR[100]=0.3
+M204
+$A_DBB[52]=3
+$A_DBR[40]=10
+;$A_DBB[32]=3
+;$A_DBR[20]=40
+M212
+REPEAT
+G4 F0.01
+UNTIL (($A_DBR[44]>=($A_DBR[40]-($A_DBR[40]*0.05))) AND ($A_DBR[44]<=($A_DBR[40]+($A_DBR[40]*0.05))))
+$A_OUTA[6]=0
+$A_DBB[902]=15
+$A_DBB[903]=1 
+M300
+M322
+$A_DBW[400]=3					;400: Operation Mode und =0: links
+;PULVER_RE_AN(4, 9.64, 30)
+$A_DBW[918]=1294				;Kollimation
+G642
+G57
+G90
+F450
+DATATRIGGER = 1

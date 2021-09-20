@@ -1,0 +1,7 @@
+DATATRIGGER = 0
+M323   ;Programmstart Laser Aus
+M301   ;Laser Freigeben
+PULVER_RE_AUS
+M205
+M213
+M30
